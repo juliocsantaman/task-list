@@ -20,7 +20,7 @@ function addTask() {
 
   iconsX = document.querySelectorAll('span');
 
-  icons.forEach(iconX => {
+  iconsX.forEach(iconX => {
     iconX.addEventListener('click', deleteTask);
   });
 
@@ -28,7 +28,7 @@ function addTask() {
 
 //Delete a task.
 function deleteTask() {
-  this.parentNode.previousSibling.nextElementSibling.remove();
+  this.parentNode.remove();
 }
 
 btnAdd.addEventListener('click', addTask);
