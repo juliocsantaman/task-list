@@ -1,0 +1,40 @@
+/* Color Theme Swatches in Hex */
+.color-1-hex { color: #118E87; }
+.color-2-hex { color: #D1BAA2; }
+.color-3-hex { background-color: #423B3C; }
+.color-4-hex { color: #3C948D; }
+.color-5-hex { color: #265282; }
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "header"
+                        "main"
+                        "footer";
+}
+
+header {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  grid-area: header;
+}
+
+.deleting-icon {
+  background: #D50000;
+  color: #FFFFFF;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+li {
+  margin-bottom: 10px;
+}
