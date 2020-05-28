@@ -1,0 +1,11 @@
+.deleting-icon {
+  background: #D50000;
+  color: #FFFFFF;
+  padding: 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+li {
+  margin-bottom: 10px;
+}
