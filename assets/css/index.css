@@ -13,7 +13,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: auto;
   grid-template-areas: "header"
                         "main"
                         "footer";
@@ -32,6 +32,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer {
+  grid-area: footer;
+  color: #FFFFFF;
+  text-align: center;
 }
 
 .deleting-icon {
