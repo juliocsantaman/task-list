@@ -27,6 +27,13 @@ header {
   grid-area: header;
 }
 
+main {
+  grid-area: main;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .deleting-icon {
   background: #D50000;
   color: #FFFFFF;
