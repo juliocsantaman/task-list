@@ -29,15 +29,16 @@ header {
 
 main {
   grid-area: main;
+  min-height: 700px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 footer {
   grid-area: footer;
   color: #FFFFFF;
   text-align: center;
+  padding: 10px;
 }
 
 .deleting-icon {
