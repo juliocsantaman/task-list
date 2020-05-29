@@ -8,7 +8,7 @@ let iconsX;
 function addTask() {
   let li = document.createElement('li');
   
-  if(task.value == '') {
+  if(blanks(task.value)) {
     alert('Error: No puedes tener una tarea en blanco');
     return;
   }
@@ -32,12 +32,16 @@ function deleteTask() {
   this.parentNode.remove();
 }
 
+//Blanks.
+function blanks(value) {
+  if(value == '' || value.trim() == '') return true
+}
+
 btnAdd.addEventListener('click', addTask);
 
 task.addEventListener('keypress', function(e) {
   if(e.key == "Enter") addTask();
 });
-
 
 
 
