@@ -1,5 +1,5 @@
 /* Color Theme Swatches in Hex */
-.color-1-hex { color: #118E87; }
+.color-1-hex { background-color: #118E87; }
 .color-2-hex { color: #D1BAA2; }
 .color-3-hex { background-color: #423B3C; }
 .color-4-hex { color: #3C948D; }
@@ -51,4 +51,18 @@ footer {
 li {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+button {
+  width: 100px;
+  height: 25px;
+  color: #FFFFFF;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
 }
