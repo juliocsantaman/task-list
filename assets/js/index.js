@@ -9,7 +9,7 @@ function addTask() {
   let li = document.createElement('li');
   
   if(blanks(task.value)) {
-    alert('Error: No puedes tener una tarea en blanco');
+    alert("Error message: Can't add a blank task.");
     return;
   }
 
