@@ -17,6 +17,7 @@ function addTask() {
   taskList.appendChild(li);
 
   task.value = '';
+  task.focus();
 
   iconsX = document.querySelectorAll('span');
 
