@@ -1,13 +1,13 @@
 //Variables.
 const btnAdd = document.getElementById('btn-add');
 const taskList = document.getElementById('task-list');
+let task = document.getElementById('add');
 let iconsX;
 
 //Add a task.
 function addTask() {
   let li = document.createElement('li');
-  let task = document.getElementById('add');
-
+  
   if(task.value == '') {
     alert('Error: No puedes tener una tarea en blanco');
     return;
@@ -33,6 +33,11 @@ function deleteTask() {
 }
 
 btnAdd.addEventListener('click', addTask);
+
+task.addEventListener('keypress', function(e) {
+  if(e.key == "Enter") addTask();
+});
+
 
 
 
