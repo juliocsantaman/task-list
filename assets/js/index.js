@@ -19,11 +19,34 @@ function addTask() {
   task.value = '';
   task.focus();
 
-  iconsX = document.querySelectorAll('span');
+  //Edit the task if user does double click.
+  li.addEventListener('dblclick', (ev) => {
+    
+    //Create a textarea.
+    let textarea = document.createElement('textarea');
+    //Replace current node with textarea.
+    li.replaceWith(textarea);
+    textarea.focus();
 
-  iconsX.forEach(iconX => {
-    iconX.addEventListener('click', deleteTask);
+    //If textarea lose focus so adding new task or leaving current task.
+    textarea.addEventListener('blur', (ev) => {
+
+      if(textarea.value != '') {
+        li.innerHTML = `${textarea.value} <span class="deleting-icon">X</span>`;
+        textarea.replaceWith(li);
+        iconsX = document.querySelectorAll('.deleting-icon');
+        getIconsX();
+        
+      } else {
+        
+        textarea.replaceWith(li);
+      }
+      
+    });
   });
+ 
+  getIconsX();
+  
 
 }
 
@@ -37,11 +60,21 @@ function blanks(value) {
   if(value == '' || value.trim() == '') return true
 }
 
+//Get all iconsX.
+function getIconsX() {
+  iconsX = document.querySelectorAll('.deleting-icon');
+
+  iconsX.forEach(iconX => {
+    iconX.addEventListener('click', deleteTask);
+  });
+}
+
 btnAdd.addEventListener('click', addTask);
 
 task.addEventListener('keypress', function(e) {
   if(e.key == "Enter") addTask();
 });
+
 
 
 
